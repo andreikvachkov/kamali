@@ -887,6 +887,7 @@ header.scroll::before {
     .product-slider__wrap {
         flex-direction: column;
         gap: 0;
+        border-radius: 0.5rem;
     }
     .product-slider__left,
     .product-slider__right {
@@ -899,9 +900,14 @@ header.scroll::before {
         height: 23.75rem;
         border-radius: 0.5rem 0.5rem 0 0;
     }
-    .product-slider__img__swiper,
-    .product-slider__main__swiper {
+    .product-slider__right {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    .product-slider__img__swiper {
         border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .product-slider__main__swiper {
+        border-radius: 0 0 0.5rem 0.5rem;
     }
     .product-slider__img__swiper .swiper-slide {
         border-radius: 0.5rem 0.5rem 0 0;
@@ -1207,12 +1213,14 @@ header.scroll::before {
         flex-direction: column;
         height: auto;
         background: #f2f2f2;
+        border-radius: 0.5rem;
     }
     .textv3-section__right {
         width: 100%;
         height: auto;
         gap: 1.25rem;
         padding: 1.25rem 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
     }
     .textv3-section__title {
         width: 100%;
@@ -1234,6 +1242,7 @@ header.scroll::before {
     .textv3-section__left {
         width: 100%;
         height: 18.75rem;
+        border-radius: 0.5rem 0.5rem 0 0;
     }
     .textv3-section__left img {
         border-radius: 0.5rem 0.5rem 0 0;
