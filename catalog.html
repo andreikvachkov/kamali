@@ -160,316 +160,410 @@
                 </div>
             </div>
         </header>
-        <section class="hero">
+        <section class="catalog-hero">
             <div class="container">
-                <div class="hero__wrap">
-                    <h1 class="hero__title">
-                        Сияй, милая
+                <div class="catalog-hero__wrap">
+                    <h1 class="catalog-hero__title">
+                        kamali — красота со вкусом
                     </h1>
-                    <a href="" class="hero__btn">
-                        начать покупки
-                    </a>
+                    <div class="catalog-hero__text">
+                        Натуральная косметика с ароматами сочных фруктов, изысканных десертов и свежести весенних цветов
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="category-section">
+        <section class="catalog-page">
             <div class="container">
-                <div class="category-section__wrap">
-                    <div class="swiper category-section__swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="category-section__item">
-                                    <img src="assets/images/category1.jpg" alt="" class="default">
-                                    <img src="assets/images/category1-hover.jpg" alt="" class="hover">
-                                    <a href="" class="category-section__item__btn">
-                                        Для тела
-                                    </a>
+                <div class="catalog-page__wrap">
+                    <div class="catalog-page__category">
+                        <div class="radio-item">
+                            <input type="radio" class="radio-input" id="catalog-category-1" name="catalog-category"
+                                value="все продукты" checked>
+                            <label for="catalog-category-1" class="radio-label">все продукты</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" class="radio-input" id="catalog-category-2" name="catalog-category"
+                                value="волосы">
+                            <label for="catalog-category-2" class="radio-label">волосы</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" class="radio-input" id="catalog-category-3" name="catalog-category"
+                                value="тело">
+                            <label for="catalog-category-3" class="radio-label">тело</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" class="radio-input" id="catalog-category-4" name="catalog-category"
+                                value="лицо">
+                            <label for="catalog-category-4" class="radio-label">лицо</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" class="radio-input" id="catalog-category-5" name="catalog-category"
+                                value="наборы">
+                            <label for="catalog-category-5" class="radio-label">наборы</label>
+                        </div>
+                    </div>
+                    <div class="catalog-page__filter">
+                        <div class="catalog-page__filter__btn">
+                            <button class="catalog-page__filter__type-btn">
+                                Тип продукта
+                            </button>
+                            <button class="catalog-page__filter__sort-btn">
+                                в наличии
+                            </button>
+                            <div class="catalog-page__filter__sort-container">
+                                <div class="radio-item">
+                                    <input type="radio" class="radio-input" id="product-sort-1" name="product-sort"
+                                        value="По популярности">
+                                    <label for="product-sort-1" class="radio-label">По популярности</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" class="radio-input" id="product-sort-2" name="product-sort"
+                                        value="В наличии" checked>
+                                    <label for="product-sort-2" class="radio-label">В наличии</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" class="radio-input" id="product-sort-3" name="product-sort"
+                                        value="По величине скидки">
+                                    <label for="product-sort-3" class="radio-label">По величине скидки</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" class="radio-input" id="product-sort-4" name="product-sort"
+                                        value="По возрастанию цены">
+                                    <label for="product-sort-4" class="radio-label">По возрастанию цены</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" class="radio-input" id="product-sort-5" name="product-sort"
+                                        value="По убыванию цены">
+                                    <label for="product-sort-5" class="radio-label">По убыванию цены</label>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="category-section__item">
-                                    <img src="assets/images/category2.jpg" alt="" class="default">
-                                    <img src="assets/images/category2-hover.jpg" alt="" class="hover">
-                                    <a href="" class="category-section__item__btn">
-                                        Для лица
-                                    </a>
+                            <div class="catalog-page__filter__type-container">
+                                <p class="name">
+                                    Выберите тип продукта
+                                </p>
+                                <div class="content">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-1"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-1" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-2"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-2" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-3"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-3" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-4"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-4" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-5"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-5" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-6"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-6" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-7"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-7" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" class="checkbox-input" id="product-type-8"
+                                            name="product-type" value="Мист для тела и волос (4)">
+                                        <label for="product-type-8" class="checkbox-label">Мист для тела и волос
+                                            (4)</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="category-section__item">
-                                    <img src="assets/images/category3.jpg" alt="" class="default">
-                                    <img src="assets/images/category3-hover.jpg" alt="" class="hover">
-                                    <a href="" class="category-section__item__btn">
-                                        для волос
-                                    </a>
+                                <div class="bottom">
+                                    <button disabled>
+                                        показать
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <button class="category-section__swiper__prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M19.5 13L7.914 13L12.414 17.5L11 18.914L4.086 12L11 5.086L12.414 6.5L7.914 11L19.5 11V13Z"
-                                    fill="#4A4A4A" />
-                            </svg>
-                        </button>
-                        <button class="category-section__swiper__next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M4.5 11L16.086 11L11.586 6.5L13 5.086L19.914 12L13 18.914L11.586 17.5L16.086 13L4.5 13V11Z"
-                                    fill="#4A4A4A" />
-                            </svg>
-                        </button>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="promo-section">
-            <div class="container">
-                <div class="promo-section__wrap">
-                    <h2 class="promo-section__title">
-                        Вкусное предложение
-                    </h2>
-                    <div class="promo-section__text">
-                        -20% на&nbsp;первый заказ по&nbsp;промокоду NEW 2025,
-                        при покупке ваших первых мистов или кремов у&nbsp;нас в&nbsp;магазине
-                    </div>
-                    <button class="promo-section__btn">
-                        Скопировать промокод
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="product-slider">
-            <div class="container">
-                <div class="product-slider__wrap">
-                    <div class="product-slider__left">
-                        <div class="swiper product-slider__img__swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="assets/images/product.jpg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/product.jpg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/product.jpg" alt="">
-                                </div>
+                    <script>
+
+                    </script>
+                    <div class="catalog-page__main">
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="product-slider__right">
-                        <div class="swiper product-slider__main__swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="product-slider__main__item">
-                                        <img src="assets/images/product2.png" alt=""
-                                            class="product-slider__main__item__img">
-                                        <div class="product-slider__main__item__top">
-                                            <p class="product-slider__main__item__top__text">
-                                                По мотивам
-                                            </p>
-                                            <p class="product-slider__main__item__top__bold-text">
-                                                La sultan de sabla
-                                            </p>
-                                        </div>
-                                        <div class="product-slider__main__item__bottom">
-                                            <h3 class="product-slider__main__item__name">
-                                                Sultan mini
-                                            </h3>
-                                            <div class="product-slider__main__item__text">
-                                                Легендарный парфюмированный увлажняющий
-                                                крем для рук и тела в новом формате
-                                            </div>
-                                            <a href="" class="product-slider__main__item__btn">
-                                                Купить сейчас
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product-slider__main__item">
-                                        <img src="assets/images/product2.png" alt=""
-                                            class="product-slider__main__item__img">
-                                        <div class="product-slider__main__item__top">
-                                            <p class="product-slider__main__item__top__text">
-                                                По мотивам
-                                            </p>
-                                            <p class="product-slider__main__item__top__bold-text">
-                                                La sultan de sabla
-                                            </p>
-                                        </div>
-                                        <div class="product-slider__main__item__bottom">
-                                            <h3 class="product-slider__main__item__name">
-                                                Sultan mini
-                                            </h3>
-                                            <div class="product-slider__main__item__text">
-                                                Легендарный парфюмированный увлажняющий
-                                                крем для рук и тела в новом формате
-                                            </div>
-                                            <a href="" class="product-slider__main__item__btn">
-                                                Купить сейчас
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product-slider__main__item">
-                                        <img src="assets/images/product2.png" alt=""
-                                            class="product-slider__main__item__img">
-                                        <div class="product-slider__main__item__top">
-                                            <p class="product-slider__main__item__top__text">
-                                                По мотивам
-                                            </p>
-                                            <p class="product-slider__main__item__top__bold-text">
-                                                La sultan de sabla
-                                            </p>
-                                        </div>
-                                        <div class="product-slider__main__item__bottom">
-                                            <h3 class="product-slider__main__item__name">
-                                                Sultan mini
-                                            </h3>
-                                            <div class="product-slider__main__item__text">
-                                                Легендарный парфюмированный увлажняющий
-                                                крем для рук и тела в новом формате
-                                            </div>
-                                            <a href="" class="product-slider__main__item__btn">
-                                                Купить сейчас
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="product-slider__main__swiper__prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
                                     fill="none">
                                     <path
-                                        d="M19.5 13L7.914 13L12.414 17.5L11 18.914L4.086 12L11 5.086L12.414 6.5L7.914 11L19.5 11V13Z"
-                                        fill="#4A4A4A" />
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
                                 </svg>
                             </button>
-                            <button class="product-slider__main__swiper__next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
                                     fill="none">
                                     <path
-                                        d="M4.5 11L16.086 11L11.586 6.5L13 5.086L19.914 12L13 18.914L11.586 17.5L16.086 13L4.5 13V11Z"
-                                        fill="#4A4A4A" />
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
                                 </svg>
                             </button>
-                            <div class="product-slider__main__swiper__navigation">
-                                <span></span> / <span></span>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item missing">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                                <p class="catalog-page__item__miss">
+                                    Нет в наличии
+                                </p>
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item-promocode">
+                            <img src="assets/images/catalog-promocode.png" alt="">
+                            <h3 class="catalog-page__item-promocode__name">
+                                &mdash;&nbsp;20% на&nbsp;первый заказ
+                                по&nbsp;промокоду NEW&nbsp;2025
+                            </h3>
+                            <button class="catalog-page__item-promocode__btn">
+                                скопировать промокод
+                            </button>
+                        </div>
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-page__item">
+                            <div class="catalog-page__item__hover">
+                                <img src="assets/images/product-hover.png" alt="">
+                                <a href="" class="catalog-page__item__btn">
+                                    Купить blanche крем - 620₽
+                                </a>
+                            </div>
+                            <p class="catalog-page__item__badge">
+                                Хит продаж
+                            </p>
+                            <button class="catalog-page__item__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path
+                                        d="M10.3873 24.173L10.8504 23.5831L10.3873 24.173ZM14.375 6.64593L13.8357 7.16717C13.977 7.31337 14.1717 7.39593 14.375 7.39593C14.5783 7.39593 14.773 7.31337 14.9143 7.16717L14.375 6.64593ZM18.3627 24.173L18.8258 24.763L18.3627 24.173ZM10.3873 24.173L10.8504 23.5831C8.87492 22.0323 6.67382 20.4884 4.93021 18.5333C3.21233 16.607 2 14.3416 2 11.3988H1.25H0.5C0.5 14.8118 1.92542 17.4177 3.81073 19.5317C5.67031 21.6169 8.03786 23.2822 9.92416 24.763L10.3873 24.173ZM1.25 11.3988H2C2 8.50321 3.64341 6.06113 5.90845 5.03012C8.12705 4.02025 11.075 4.31088 13.8357 7.16717L14.375 6.64593L14.9143 6.1247C11.769 2.87057 8.15441 2.35971 5.28702 3.6649C2.46607 4.94896 0.5 7.9385 0.5 11.3988H1.25ZM10.3873 24.173L9.92416 24.763C10.5986 25.2924 11.3078 25.8449 12.0228 26.2609C12.7376 26.6769 13.5291 27 14.375 27V26.25V25.5C13.9084 25.5 13.3874 25.3195 12.7772 24.9644C12.1671 24.6094 11.5386 24.1234 10.8504 23.5831L10.3873 24.173ZM18.3627 24.173L18.8258 24.763C20.7121 23.2822 23.0797 21.6169 24.9393 19.5317C26.8246 17.4177 28.25 14.8118 28.25 11.3988H27.5H26.75C26.75 14.3416 25.5377 16.607 23.8198 18.5333C22.0762 20.4884 19.8751 22.0323 17.8996 23.5831L18.3627 24.173ZM27.5 11.3988H28.25C28.25 7.9385 26.2839 4.94896 23.463 3.6649C20.5956 2.35971 16.981 2.87057 13.8357 6.1247L14.375 6.64593L14.9143 7.16717C17.675 4.31088 20.6229 4.02025 22.8416 5.03012C25.1066 6.06113 26.75 8.50321 26.75 11.3988H27.5ZM18.3627 24.173L17.8996 23.5831C17.2114 24.1234 16.5829 24.6094 15.9728 24.9644C15.3626 25.3195 14.8416 25.5 14.375 25.5V26.25V27C15.2209 27 16.0124 26.6769 16.7272 26.2609C17.4422 25.8449 18.1514 25.2924 18.8258 24.763L18.3627 24.173Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <div class="catalog-page__item__img">
+                                <img src="assets/images/catalog-product.png" alt="">
+                            </div>
+                            <div class="catalog-page__item__info">
+                                <div class="catalog-page__item__left">
+                                    <h3 class="catalog-page__item__name">
+                                        vanilla
+                                    </h3>
+                                    <div class="catalog-page__item__text">
+                                        Парфюмированный крем для тела
+                                    </div>
+                                </div>
+                                <p class="catalog-page__item__price">
+                                    620₽
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="text-section">
-            <div class="container">
-                <div class="text-section__wrap">
-                    <div class="text-section__left">
-                        <h3 class="text-section__title">
-                            Миссия kamali
-                        </h3>
-                        <img src="assets/images/text-section2.png" alt="" class="text-section__left__img">
-                        <div class="text-section__content">
-                            <div class="text-section__text">
-                                <p>
-                                    Предлагать женщинам средства по уходу за собой, которые соответствуют высоким
-                                    стандартам
-                                    качества и дарят уверенность
-                                    в себе
-                                </p>
-                                <br>
-                                <p>
-                                    Мы стремимся делать натуральную косметику доступной, безопасной, экологичной и
-                                    полностью
-                                    соответствующей современным тенденциям
-                                    в мире ухода за кожей и волосами. Каждый наш продукт — это вклад
-                                    в уважение к природе, чистоту тела и души
-                                </p>
-                            </div>
-                            <a href="" class="text-section__btn">
-                                Перейти в каталог
-                            </a>
-                        </div>
-                    </div>
-                    <div class="text-section__right">
-                        <img src="assets/images/text-section1.jpg" alt="" class="text-section__right__img">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="textv2-section">
-            <div class="container">
-                <div class="textv2-section__wrap">
-                    <div class="textv2-section__content">
-                        <h2 class="textv2-section__title">
-                            Красота в&nbsp;гармонии с&nbsp;природой
-                        </h2>
-                        <div class="textv2-section__text">
-                            Косметика Kamali создана на основе натуральных ингредиентов: цветочных дистиллятов, целебных
-                            масел, соков и травяных настоев
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="textv3-section">
-            <div class="container">
-                <div class="textv3-section__wrap">
-                    <div class="textv3-section__left">
-                        <img src="assets/images/textv3-section1.jpg" alt="" class="textv3-section__left__img">
-                    </div>
-                    <div class="textv3-section__right">
-                        <h3 class="textv3-section__title">
-                            культовые ароматы,
-                            которые влюбляют в себя
-                        </h3>
-                        <img src="assets/images/textv3-section2.png" alt="" class="textv3-section__right__img">
-                        <div class="textv3-section__content">
-                            <div class="textv3-section__text">
-                                <p>
-                                    Спреи-мисты от&nbsp;Kamali&nbsp;&mdash; лёгкое прикосновение свежести и&nbsp;заботы,
-                                    которое подчеркивает
-                                    настроение
-                                    и&nbsp;деликатно ухаживает за&nbsp;кожей
-                                </p>
-                            </div>
-                            <a href="" class="textv3-section__btn">
-                                Найти свой аромат
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="textv4-section">
-            <div class="container">
-                <div class="textv4-section__wrap">
-                    <div class="textv4-section__left">
-                        <h3 class="textv4-section__title">
-                            10 лет мы производим косметику
-                        </h3>
-                        <div class="textv4-section__content">
-                            <div class="textv4-section__text">
-                                <p>
-                                    В&nbsp;нашем ассортименте более 100 видов косметики
-                                    из&nbsp;натуральных ингредиентов и&nbsp;экологичного сырья
-                                </p>
-                            </div>
-                            <a href="" class="textv4-section__btn">
-                                Узнать подробнее
-                            </a>
-                        </div>
-                    </div>
-                    <div class="textv4-section__right">
-                        <img src="assets/images/textv4-section1.jpg" alt="" class="textv4-section__right__img">
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
         <footer>
             <div class="container">
                 <div class="footer__wrap">
