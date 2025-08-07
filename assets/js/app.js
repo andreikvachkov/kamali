@@ -74,7 +74,13 @@ if (deliveryDateBlock && radio1 && radio2) {
         if (radio2.checked) deliveryDateBlock.style.display = 'flex';
     });
 }
-
+const btnCookies = document.querySelectorAll('.cookie-popup__accept-btn, .cookie-popup__decline-btn');
+btnCookies.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        document.querySelector('.cookie-popup').classList.remove('active');
+    });
+});
 
 const btn = document.querySelector('.catalog-page__filter__type-btn');
 const btnClose = document.querySelector('.catalog-page__filter__type-container__close');
