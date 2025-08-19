@@ -668,7 +668,7 @@
             </div>
         </footer>
     </div>
-    <div class="popup-background"></div>
+    <div class="popup-background active"></div>
     <div class="search-popup">
         <button class="search-popup__close">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -887,7 +887,7 @@
             </div>
         </div>
     </div>
-    <div class="cookie-popup active">
+    <div class="cookie-popup">
         <div class="cookie-popup__wrap">
             <div class="cookie-popup__text">
                 <p>
@@ -922,11 +922,26 @@
             <form action="">
                 <div class="account__return-popup__form-content">
                     <div class="account__return-popup__return-reason">
-                        <button class="return-reason__btn">
+                        <button class="return-reason__btn" type="button">
                             Выберите причину из списка
                         </button>
                         <div class="return-reason__content">
-
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-1"
+                                    name="account__return-popup" value="Брак">
+                                <label for="account__return-popup-1" class="radio-label">Брак</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-2"
+                                    name="account__return-popup" value="Не нравится аромат ">
+                                <label for="account__return-popup-2" class="radio-label">Не нравится аромат </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-3"
+                                    name="account__return-popup" value="Целостность упаковки нарушена ">
+                                <label for="account__return-popup-3" class="radio-label">Целостность упаковки нарушена
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="account__return-popup__textarea">
@@ -948,6 +963,24 @@
                 <button class="account__return-popup__form__btn">
                     Отправить заявку на возврат
                 </button>
+            </form>
+        </div>
+    </div>
+    <div class="review-popup active">
+        <button class="review-popup__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="review-popup__content">
+            <p class="review-popup__name">
+                оставить отзыв
+            </p>
+            <form action="">
+                <div class="review-popup__form-content">
+
+                </div>
             </form>
         </div>
     </div>

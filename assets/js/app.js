@@ -38,6 +38,18 @@ document.querySelector('.account__popup-info__close')?.addEventListener('click',
     closePopup(document.querySelector('.account__popup-info'));
 });
 
+document.querySelectorAll('.account__order-page-return-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPopup(document.querySelector('.account__return-popup'));
+    });
+});
+
+document.querySelector('.account__return-popup__close')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closePopup(document.querySelector('.account__return-popup'));
+});
+
 
 document.querySelectorAll('.scrollable').forEach(el => {
     el.addEventListener('wheel', (e) => {
@@ -389,11 +401,26 @@ const thumbsProductSwiper = new Swiper('.product-hero__thumbs-slider', {
 const mainProductSwiper = new Swiper('.product-hero__main-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
-    allowTouchMove: false,
-    simulateTouch: false,
     speed: 600,
+    pagination: {
+        el: '.product-hero__pagination',
+        clickable: true,
+        type: 'bullets',
+    },
     thumbs: {
         swiper: thumbsProductSwiper,
+    },
+    breakpoints: {
+        0: {
+            allowTouchMove: true,
+            simulateTouch: true,
+            thumbs: { swiper: null },
+        },
+        769: {
+            allowTouchMove: false,
+            simulateTouch: false,
+            thumbs: { swiper: thumbsProductSwiper },
+        }
     },
     on: {
         init: function () {
@@ -770,5 +797,102 @@ codeInputs.forEach((input, index) => {
         if (e.key === "Backspace" && input.value === '' && index > 0) {
             codeInputs[index - 1].focus();
         }
+    });
+});
+
+
+
+
+const reasonBlock = document.querySelector(".account__return-popup__return-reason");
+if (reasonBlock) {
+    const reasonBtn = reasonBlock.querySelector(".return-reason__btn");
+    const reasonContent = reasonBlock.querySelector(".return-reason__content");
+
+    reasonBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (reasonContent.classList.contains("open")) {
+            reasonBtn.classList.remove("active");
+            reasonContent.style.height = reasonContent.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                reasonContent.style.height = "0px";
+            });
+            reasonContent.addEventListener("transitionend", function handler() {
+                reasonContent.style.display = "none";
+                reasonContent.classList.remove("open");
+                reasonContent.removeEventListener("transitionend", handler);
+            });
+        } else {
+            reasonBtn.classList.add("active");
+            reasonContent.style.display = "block";
+            let h = reasonContent.scrollHeight;
+            reasonContent.style.height = "0px";
+
+            requestAnimationFrame(() => {
+                reasonContent.style.height = h + "px";
+            });
+
+            reasonContent.classList.add("open");
+
+            reasonContent.addEventListener("transitionend", function handler() {
+                if (reasonContent.classList.contains("open")) {
+                    reasonContent.style.height = "auto";
+                }
+                reasonContent.removeEventListener("transitionend", handler);
+            });
+        }
+    });
+
+    reasonBlock.querySelectorAll(".radio-input").forEach((input) => {
+        input.addEventListener("change", () => {
+            reasonBtn.textContent = input.value;
+            reasonBtn.classList.remove("active");
+
+            reasonContent.style.height = reasonContent.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                reasonContent.style.height = "0px";
+            });
+            reasonContent.addEventListener("transitionend", function handler() {
+                reasonContent.style.display = "none";
+                reasonContent.classList.remove("open");
+                reasonContent.removeEventListener("transitionend", handler);
+            });
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!reasonBlock.contains(e.target) && reasonContent.classList.contains("open")) {
+            reasonBtn.classList.remove("active");
+            reasonContent.style.height = reasonContent.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                reasonContent.style.height = "0px";
+            });
+            reasonContent.addEventListener("transitionend", function handler() {
+                reasonContent.style.display = "none";
+                reasonContent.classList.remove("open");
+                reasonContent.removeEventListener("transitionend", handler);
+            });
+        }
+    });
+}
+
+
+
+const giftCardBlocks = document.querySelectorAll(".account__giftcards__add-card");
+
+giftCardBlocks.forEach((giftCardBlock) => {
+    const giftCardAddBtn = giftCardBlock.querySelector(".account__giftcards__add-card__add-btn");
+    const giftCardBackBtn = giftCardBlock.querySelector(".account__giftcards__add-card__card__back-btn");
+    const giftCardContent = giftCardBlock.querySelector(".account__giftcards__add-card__content");
+
+    giftCardAddBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        giftCardContent.classList.add("active");
+    });
+
+    giftCardBackBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        giftCardContent.classList.remove("active");
     });
 });

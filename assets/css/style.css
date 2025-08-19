@@ -5796,6 +5796,7 @@ footer {
 .product-hero__accordion .accordion__content {
     color: #4a4a4a;
     line-height: 160%;
+    padding-bottom: 0.9375rem;
 }
 .product-hero__accordion .accordion__item:not(.accordion__item_show) .accordion__body {
     display: none;
@@ -5803,7 +5804,33 @@ footer {
 .product-hero__add-wishlist_mobile {
     display: none;
 }
+.product-hero__pagination {
+    display: none;
+    width: 100%;
+    gap: 0.3125rem;
+    justify-content: space-between;
+}
+.product-hero__pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+.product-hero__pagination .swiper-pagination-bullet {
+    width: auto;
+    flex: 1;
+    height: 0.125rem;
+    display: flex;
+    border-radius: 0.5rem;
+    background: rgba(74, 74, 74, 0.2);
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+.product-hero__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #4a4a4a;
+}
 @media (max-width: 768px) {
+    .product-hero__pagination {
+        display: flex;
+    }
     .product-hero {
         height: auto;
         border-radius: 0;
@@ -6449,6 +6476,7 @@ footer {
     }
     .product-page-slider__main__swiper .swiper-slide {
         border-radius: 0;
+        height: auto;
     }
     .product-page-slider__main__item {
         gap: 1.25rem;
@@ -6696,7 +6724,7 @@ footer {
     display: flex;
     justify-content: center;
 }
-.swiper-pagination-bullet {
+.product-reviews__item__swiper__pagination .swiper-pagination-bullet {
     width: 0.4375rem;
     height: 0.4375rem;
     background: rgba(255, 255, 255);
@@ -6704,7 +6732,7 @@ footer {
     border-radius: 3.125rem;
     transition: all 0.4s ease;
 }
-.swiper-pagination-bullet-active {
+.product-reviews__item__swiper__pagination .swiper-pagination-bullet-active {
     opacity: 1;
     width: 1rem;
 }
@@ -9162,6 +9190,9 @@ footer {
     transform: translateX(-50%) translateY(-50%);
     display: none;
 }
+.account__return-popup.active {
+    display: flex;
+}
 .account__return-popup__close {
     position: absolute;
     z-index: 2;
@@ -9177,6 +9208,14 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1.875rem;
+    width: 100%;
+}
+.account__return-popup__name {
+    color: #4a4a4a;
+    font-family: "Prosto One";
+    line-height: 165%;
+    text-transform: uppercase;
+    padding: 0.125rem 0;
 }
 .account__return-popup__content form {
     width: 100%;
@@ -9268,6 +9307,83 @@ footer {
     color: rgba(74, 74, 74, 0.7);
     font-size: 0.75rem;
     line-height: 140%;
+}
+.account__return-popup__return-reason {
+    position: relative;
+}
+.account__return-popup__return-reason .return-reason__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.875rem;
+    padding: 0.7188rem 1rem;
+    color: #4a4a4a;
+    font-size: 0.875rem;
+    line-height: 160%;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #e8e8e8;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+.account__return-popup__return-reason .return-reason__btn::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='21' viewBox='0 0 20 21' fill='none'%3E%3Cpath d='M16 7L10 13L4 7' stroke='%23AEAEAE' stroke-opacity='0.7' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 1.25rem;
+    height: 1.3125rem;
+    transition: all 0.3s ease;
+}
+.account__return-popup__return-reason .return-reason__btn.active {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.account__return-popup__return-reason .return-reason__btn.active::after {
+    transform: scaleY(-1);
+}
+.return-reason__content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 4;
+    border: 0.0625rem solid #e8e8e8;
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease;
+    display: none;
+}
+.return-reason__content .radio-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.return-reason__content .radio-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.return-reason__content .radio-label {
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    padding: 0.7188rem 1rem;
+    color: #4a4a4a;
+    font-size: 0.875rem;
+    line-height: 160%;
+    transition: all 0.3s ease;
+}
+.return-reason__content .radio-item:not(:last-child) .radio-label {
+    border-bottom: 0.0625rem solid #e8e8e8;
+}
+.return-reason__content .radio-input:checked + .radio-label {
+    box-shadow: 0 0.1875rem 0.625rem 0 rgba(61, 68, 82, 0.08);
+    background: #f2f2f2;
 }
 
 /* account__return-popup end  */
@@ -9843,7 +9959,210 @@ footer {
     font-weight: 700;
     line-height: 155%;
 }
-
+.account__giftcards__add-card__content {
+    display: none;
+}
+.account__giftcards__add-card__content.active {
+    display: block;
+}
+.account__giftcards__add-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+.account__giftcards__add-card__buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+.account__giftcards__add-card__give-btn,
+.account__giftcards__add-card__add-btn {
+    display: flex;
+    padding: 0.5625rem 1.5rem;
+    color: #4a4a4a;
+    line-height: normal;
+    letter-spacing: 0.01rem;
+    text-transform: uppercase;
+    border-radius: 3.125rem;
+    border: 0.0625rem solid rgba(174, 174, 174, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.5625rem);
+}
+.account__giftcards__add-card__card {
+    width: 100%;
+    display: flex;
+    gap: 1.25rem;
+}
+.account__giftcards__add-card__card__img {
+    width: 20.9375rem;
+    height: 13.4375rem;
+    border-radius: 1rem;
+    border: 0.0625rem dashed rgba(98, 22, 23, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account__giftcards__add-card__card__img img {
+    width: 9.0625rem;
+    height: auto;
+}
+.account__giftcards__add-card__card__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.account__giftcards__add-card__card__buttons {
+    display: flex;
+    margin: auto 0 0 0;
+    gap: 0.75rem;
+}
+.account__giftcards__add-card__card__back-btn {
+    padding: 0.4063rem 1.5rem;
+    color: #4a4a4a;
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 0.0088rem;
+    text-transform: uppercase;
+    border-radius: 3.125rem;
+    border: 0.0625rem solid rgba(174, 174, 174, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.5625rem);
+}
+.account__giftcards__add-card__card__submit-btn {
+    padding: 0.4063rem 1.5rem;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 0.0088rem;
+    text-transform: uppercase;
+    border: 0.0625rem solid transparent;
+    border-radius: 3.125rem;
+    background: #621617;
+    backdrop-filter: blur(1.5625rem);
+    transition: all 0.3s ease;
+}
+.account__giftcards__add-card__card__submit-btn:disabled {
+    border-radius: 3.125rem;
+    border: 0.0625rem solid rgba(174, 174, 174, 0.7);
+    background: rgba(74, 74, 74, 0.24);
+    backdrop-filter: blur(1.5625rem);
+}
+.account__giftcards__add-card__card__submit-btn:not(:disabled):hover {
+    background: #7f2425;
+}
+.account__giftcards__add-card__field {
+    width: 100%;
+}
+.account__giftcards__add-card__field input {
+    padding: 0.7188rem 1rem;
+    width: 100%;
+    color: #4a4a4a;
+    font-size: 0.875rem;
+    line-height: 160%;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #e8e8e8;
+    background: #fff;
+}
+.account__giftcards__add-card__field input::placeholder {
+    color: rgba(74, 74, 74, 0.6);
+}
+.account__giftcards__add-card__field .error {
+    margin-top: 0.5rem;
+    color: rgba(222, 3, 3, 0.7);
+    font-size: 0.75rem;
+    line-height: 140%;
+    display: none;
+}
+@media (max-width: 768px) {
+    .account__giftcards {
+        padding-top: 1.5rem;
+    }
+    .account__giftcards-empty__footer {
+        margin-top: 1.875rem;
+        align-items: center;
+        gap: 1rem;
+    }
+    .account__giftcards__header {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+        padding: 0 0 0.75rem;
+    }
+    .account__giftcards-card {
+        flex-direction: column;
+    }
+    .account__giftcards-card__img {
+        width: 100%;
+        height: 13.125rem;
+        border-radius: 0.75rem;
+    }
+    .account__giftcards-card__info {
+        flex: none;
+        width: 100%;
+    }
+    .account__giftcards-card__balance {
+        margin: 0;
+    }
+    .account__giftcards__add-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        width: 100%;
+    }
+    .account__giftcards__add-card__buttons {
+        gap: 1rem;
+    }
+    .account__giftcards__add-card__give-btn,
+    .account__giftcards__add-card__add-btn {
+        width: calc(50% - 0.5rem);
+        justify-content: center;
+        padding: 0.5625rem;
+    }
+    .account__giftcards__add-card__card {
+        flex-direction: column;
+    }
+    .account__giftcards__add-card__card__img {
+        width: 100%;
+        height: 13.125rem;
+        border-radius: 1.25rem;
+    }
+    .account__giftcards__add-card__card__info {
+        flex: none;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .account__giftcards__add-card__card__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0.5rem 0 0 0;
+        gap: 0.75rem;
+    }
+    .account__giftcards__add-card__field {
+        width: 100%;
+    }
+    .account__giftcards__add-card__field input {
+        padding: 0.7188rem 1rem;
+        width: 100%;
+        color: #4a4a4a;
+        font-size: 0.875rem;
+        line-height: 160%;
+        border-radius: 0.5rem;
+        border: 0.0625rem solid #e8e8e8;
+        background: #fff;
+    }
+    .account__giftcards__add-card__field input::placeholder {
+        color: rgba(74, 74, 74, 0.6);
+    }
+    .account__giftcards__add-card__field .error {
+        margin-top: 0.5rem;
+        color: rgba(222, 3, 3, 0.7);
+        font-size: 0.75rem;
+        line-height: 140%;
+        display: none;
+    }
+}
 /* account__giftcards end  */
 
 /* account-login start  */
@@ -10663,3 +10982,34 @@ footer {
     }
 }
 /* account-newPassword end  */
+
+/* review-popup start  */
+
+.review-popup {
+    position: fixed;
+    width: 28.75rem;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background: #fff;
+    z-index: 200;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+}
+.review-popup.active {
+    display: flex;
+}
+.review-popup__close {
+    position: absolute;
+    z-index: 2;
+    right: 1.25rem;
+    top: 1.4375rem;
+    display: flex;
+}
+.review-popup__close svg {
+    width: 1.5rem;
+    height: auto;
+}
+
+/* review-popup end  */
