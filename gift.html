@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/animation.js" defer></script>
 </head>
 
 <body>
@@ -68,7 +67,7 @@
         </div>
     </div>
     <div class="wrap">
-        <header>
+        <header class="header-active">
             <div class="container">
                 <div class="header__wrap">
                     <div class="col col-nav">
@@ -213,7 +212,7 @@
             <div class="container">
                 <div class="gift-card__wrap">
                     <div class="gift-card__left">
-                        <!-- <div class="gift-card__left__main" id="gift-stage-1">
+                        <div class="gift-card__left__main" id="gift-stage-1">
                             <div class="gift-card__count-stage">
                                 1 / 4
                             </div>
@@ -245,16 +244,13 @@
                                     </div>
                                 </div>
                                 <div class="gift-card__content__bottom">
-                                    <button class="gift-card__prev">
-                                        Назад
-                                    </button>
                                     <button class="gift-card__next">
                                         следующий шаг
                                     </button>
                                 </div>
                             </div>
-                        </div> -->
-                        <!-- <div class="gift-card__left__main" id="gift-stage-2">
+                        </div>
+                        <div class="gift-card__left__main" id="gift-stage-2">
                             <div class="gift-card__count-stage">
                                 2 / 4
                             </div>
@@ -307,7 +303,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="gift-card__left__main" id="gift-stage-3">
                             <div class="gift-card__count-stage">
                                 3 / 4
@@ -338,9 +334,78 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gift-card__delivery__date">
-                                        
+                                    <div class="gift-card__delivery__date-time">
+                                        <div class="gift-card__delivery__date">
+                                            <button type="button" class="gift-card__delivery__date__btn">Дата</button>
+                                            <div class="gift-card__delivery__date__content">
+
+                                            </div>
+
+                                        </div>
+                                        <div class="gift-card__delivery__time">
+                                            <button type="button" class="gift-card__delivery__time__btn">Время</button>
+                                            <div class="gift-card__delivery__time__content active">
+                                                <div class="gift-card__delivery__time__content__wrap scrollable">
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-1"
+                                                            name="gift-time" value="00:00">
+                                                        <label for="gift-time-1" class="radio-label">00:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-2"
+                                                            name="gift-time" value="01:00">
+                                                        <label for="gift-time-2" class="radio-label">01:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-3"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-3" class="radio-label">02:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-4"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-4" class="radio-label">03:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-5"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-5" class="radio-label">04:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-6"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-6" class="radio-label">05:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-7"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-7" class="radio-label">06:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-8"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-8" class="radio-label">07:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-9"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-9" class="radio-label">08:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-10"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-10" class="radio-label">09:00</label>
+                                                    </div>
+                                                    <div class="radio-item">
+                                                        <input type="radio" class="radio-input" id="gift-time-11"
+                                                            name="gift-time" value="02:00">
+                                                        <label for="gift-time-11" class="radio-label">10:00</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                                 <div class="gift-card__content__bottom">
                                     <button class="gift-card__prev">
@@ -348,6 +413,53 @@
                                     </button>
                                     <button class="gift-card__next">
                                         следующий шаг
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-card__left__main gift-card__left__final" id="gift-stage-4">
+                            <div class="gift-card__count-stage">
+                                4 / 4
+                            </div>
+                            <h3 class="gift-card__title">
+                                Давайте проверим?
+                            </h3>
+                            <div class="gift-card__content">
+                                <div class="gift-card__final">
+                                    <div class="row">
+                                        <p>
+                                            Имя: <span>Ольга</span>
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                            Номер телефона: <span>+7 (199) 999-99-99</span>
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                            E-mail: <span>kamalicosm@mail.ru</span>
+                                        </p>
+                                    </div>
+                                    <div class="row-text">
+                                        <p>
+                                            Поздравление:
+                                        </p>
+                                        <div class="text">
+                                            Добавьте поздравление, которое поднимет настроение. Обещаем, подглядывать не
+                                            будем 🤍
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="" class="gift-card__policy">
+                                    Условия покупки и использование подарочных карт
+                                </a>
+                                <div class="gift-card__content__bottom">
+                                    <button class="gift-card__prev">
+                                        Назад
+                                    </button>
+                                    <button class="gift-card__submit">
+                                        Оформить карту
                                     </button>
                                 </div>
                             </div>
@@ -363,6 +475,184 @@
                 </div>
             </div>
         </section>
+        <script>
+            const wrapper = document.querySelector(".gift-card__delivery__date");
+            const toggleBtn = wrapper.querySelector(".gift-card__delivery__date__btn");
+            const container = wrapper.querySelector(".gift-card__delivery__date__content");
+
+            let today = new Date();
+            let currentMonth = today.getMonth();
+            let currentYear = today.getFullYear();
+
+            let selectedDay = today.getDate();
+            let selectedMonth = today.getMonth();
+            let selectedYear = today.getFullYear();
+
+            const months = [
+                "Январь", "Февраль", "Март", "Апрель",
+                "Май", "Июнь", "Июль", "Август",
+                "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+            ];
+
+            toggleBtn.addEventListener("click", () => {
+                container.classList.toggle("active");
+                renderCalendar(currentMonth, currentYear);
+            });
+
+            function renderCalendar(month, year) {
+                container.innerHTML = `
+        <div class="calendar-header">
+            <div class="month-dropdown">
+                <button class="month-btn">${months[month]}</button>
+                <div class="month-options scrollable">
+                    ${months.map((m, i) => `<div data-month="${i}">${m}</div>`).join('')}
+                </div>
+            </div>
+
+            <div class="year-selector">
+                <span class="year-display">${year}</span>
+                <div class="year-selector__btns">
+                    <button class="year-prev">
+                        <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.87186 3.86983C6.701 4.04339 6.424 4.04339 6.25314 3.86983L3.5 1.07298L0.746859 3.86983C0.576005 4.04339 0.298995 4.04339 0.128141 3.86983C-0.0427138 3.69626 -0.0427138 3.41485 0.128141 3.24129L3.19064 0.130175C3.3615 -0.0433918 3.6385 -0.0433918 3.80936 0.130175L6.87186 3.24129C7.04271 3.41485 7.04271 3.69626 6.87186 3.86983Z" fill="#AEAEAE" fill-opacity="0.7"/>
+</svg>
+
+                        </button>            
+                    <button class="year-next">
+                        <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.128141 0.130175C0.298995 -0.0433916 0.576005 -0.0433916 0.746859 0.130175L3.5 2.92702L6.25314 0.130175C6.424 -0.0433916 6.701 -0.0433916 6.87186 0.130175C7.04271 0.303741 7.04271 0.585148 6.87186 0.758714L3.80936 3.86983C3.6385 4.04339 3.3615 4.04339 3.19064 3.86983L0.128141 0.758714C-0.0427136 0.585148 -0.0427136 0.303741 0.128141 0.130175Z" fill="#AEAEAE" fill-opacity="0.7"/>
+</svg>
+
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-days">
+            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
+            <div>Пт</div><div>Сб</div><div>Вс</div>
+        </div>
+        <div class="calendar-dates"></div>
+    `;
+
+                const datesContainer = container.querySelector(".calendar-dates");
+                const firstDay = new Date(year, month, 1).getDay() || 7;
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                datesContainer.innerHTML = '';
+
+                for (let i = 1; i < firstDay; i++) datesContainer.innerHTML += `<div></div>`;
+
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const dateDiv = document.createElement("div");
+                    dateDiv.textContent = d;
+
+                    if (d === selectedDay && month === selectedMonth && year === selectedYear) {
+                        dateDiv.classList.add("selected");
+                    }
+
+                    dateDiv.addEventListener("click", () => {
+                        container.querySelectorAll(".calendar-dates div").forEach(el => el.classList.remove("selected"));
+                        dateDiv.classList.add("selected");
+
+                        selectedDay = d;
+                        selectedMonth = month;
+                        selectedYear = year;
+
+                        toggleBtn.textContent = `${d < 10 ? '0' + d : d}.${month + 1 < 10 ? '0' + (month + 1) : month + 1}.${year}`;
+                        container.classList.remove("active");
+                    });
+
+                    datesContainer.appendChild(dateDiv);
+                }
+
+                const monthBtn = container.querySelector(".month-btn");
+                const monthDropdown = container.querySelector(".month-dropdown");
+                monthBtn.addEventListener("click", () => monthDropdown.classList.toggle("active"));
+                container.querySelectorAll(".month-options div").forEach(el => {
+                    el.addEventListener("click", () => {
+                        currentMonth = parseInt(el.dataset.month);
+                        monthDropdown.classList.remove("active");
+                        renderCalendar(currentMonth, currentYear);
+                    });
+                });
+
+                const yearDisplay = container.querySelector(".year-display");
+                container.querySelector(".year-prev").addEventListener("click", () => {
+                    currentYear--;
+                    yearDisplay.textContent = currentYear;
+                    renderCalendar(currentMonth, currentYear);
+                });
+                container.querySelector(".year-next").addEventListener("click", () => {
+                    currentYear++;
+                    yearDisplay.textContent = currentYear;
+                    renderCalendar(currentMonth, currentYear);
+                });
+            }
+
+            const timeBlocks = document.querySelectorAll(".gift-card__delivery__time");
+
+            timeBlocks.forEach(block => {
+                const btn = block.querySelector(".gift-card__delivery__time__btn");
+                const content = block.querySelector(".gift-card__delivery__time__content");
+                const radios = block.querySelectorAll(".radio-input");
+
+                btn.addEventListener("click", () => {
+                    content.classList.toggle("active");
+                });
+
+                radios.forEach(radio => {
+                    radio.addEventListener("change", () => {
+                        btn.textContent = radio.value;
+                        content.classList.remove("active");
+                    });
+                });
+
+                document.addEventListener("click", (e) => {
+                    if (!block.contains(e.target)) {
+                        content.classList.remove("active");
+                    }
+                });
+            });
+
+
+
+            const stages = document.querySelectorAll(".gift-card__left__main"); // все этапы
+            let currentStage = 0; // начинаем с первого
+
+            // Функция переключения этапа
+            function showStage(index) {
+                stages.forEach((stage, i) => {
+                    stage.style.display = (i === index) ? "flex" : "none";
+                });
+            }
+
+            // Навешиваем события на кнопки
+            stages.forEach((stage, index) => {
+                const nextBtn = stage.querySelector(".gift-card__next");
+                const prevBtn = stage.querySelector(".gift-card__prev");
+
+                if (nextBtn) {
+                    nextBtn.addEventListener("click", () => {
+                        if (index < stages.length - 1) {
+                            currentStage = index + 1;
+                            showStage(currentStage);
+                        }
+                    });
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener("click", () => {
+                        if (index > 0) {
+                            currentStage = index - 1;
+                            showStage(currentStage);
+                        }
+                    });
+                }
+            });
+
+            // показать первый этап
+            showStage(currentStage);
+        </script>
         <footer>
             <div class="container">
                 <div class="footer__wrap">
@@ -700,6 +990,27 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="cookie-popup active">
+        <div class="cookie-popup__wrap">
+            <div class="cookie-popup__text">
+                <p>
+                    На этом веб-сайте используются файлы Cookie и аналогичные технологии.
+                </p>
+                <p>
+                    Продолжая пользоваться сайтом,
+                    вы соглашаетесь c <a href="">политикой изпользолвания cookies</a>
+                </p>
+            </div>
+            <div class="cookie-popup__buttons">
+                <button class="cookie-popup__decline-btn">
+                    отклонить
+                </button>
+                <button class="cookie-popup__accept-btn">
+                    ПРинять
+                </button>
             </div>
         </div>
     </div>

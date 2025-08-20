@@ -113,7 +113,7 @@ pairs.forEach(pair => {
 
 
 
-const deliveryDateBlock = document.querySelector('.gift-card__delivery__date');
+const deliveryDateBlock = document.querySelector('.gift-card__delivery__date-time');
 const radio1 = document.getElementById('gift-card__delivery-1');
 const radio2 = document.getElementById('gift-card__delivery-2');
 
@@ -123,7 +123,7 @@ if (deliveryDateBlock && radio1 && radio2) {
     });
 
     radio2.addEventListener('change', () => {
-        if (radio2.checked) deliveryDateBlock.style.display = 'flex';
+        if (radio2.checked) deliveryDateBlock.style.display = 'grid';
     });
 }
 const btnCookies = document.querySelectorAll('.cookie-popup__accept-btn, .cookie-popup__decline-btn');
