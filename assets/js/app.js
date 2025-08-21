@@ -51,6 +51,44 @@ document.querySelector('.account__return-popup__close')?.addEventListener('click
 });
 
 
+document.querySelectorAll('.account__order-page-item__review-btn, .account__order-page-item__review-btn_mobile').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPopup(document.querySelector('.review-popup'));
+    });
+});
+
+document.querySelector('.review-popup__close')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closePopup(document.querySelector('.review-popup'));
+});
+
+document.querySelectorAll('.order-registration__bonus__block').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPopup(document.querySelector('.bonus-popup'));
+    });
+});
+
+document.querySelector('.bonus-popup__close')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closePopup(document.querySelector('.bonus-popup'));
+});
+
+
+document.querySelectorAll('.header__basket').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPopup(document.querySelector('.popup-cart'));
+    });
+});
+
+document.querySelector('.popup-cart__close')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closePopup(document.querySelector('.popup-cart'));
+});
+
+
 document.querySelectorAll('.scrollable').forEach(el => {
     el.addEventListener('wheel', (e) => {
         const delta = e.deltaY;
@@ -95,7 +133,8 @@ const pairs = [
     { textareaId: "giftMessage", countId: "gift-card-charCount" },
     { textareaId: "cdek-courierMessage", countId: "cdek-courier-charCount" },
     { textareaId: "courierMessage", countId: "courier-charCount" },
-    { textareaId: "return-reasonMessage", countId: "return-reason-charCount" }
+    { textareaId: "return-reasonMessage", countId: "return-reason-charCount" },
+    { textareaId: "review-popupMessage", countId: "review-popup-charCount" }
 ];
 
 pairs.forEach(pair => {
@@ -723,17 +762,36 @@ if (checkedRadio) {
     checkedRadio.dispatchEvent(new Event('change'));
 }
 
-document.querySelectorAll('.order-registration__switch-header .switch-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+const switchBtn = document.querySelector('.order-registration__gift-card .switch-btn');
+const giftCardContent = document.querySelector('.order-registration__gift-card__content');
+
+if (switchBtn && giftCardContent) {
+    switchBtn.addEventListener('click', function () {
         this.classList.toggle('switch-on');
 
         if (this.classList.contains('switch-on')) {
-            this.dispatchEvent(new Event('on.switch'));
+            giftCardContent.classList.add('show');
         } else {
-            this.dispatchEvent(new Event('off.switch'));
+            giftCardContent.classList.remove('show');
         }
     });
-});
+}
+const switchBtnBonus = document.querySelector('.order-registration__bonus .switch-btn');
+const giftCardContentBonus = document.querySelector('.order-registration__bonus__content');
+
+if (switchBtnBonus && giftCardContentBonus) {
+    switchBtnBonus.addEventListener('click', function () {
+        this.classList.toggle('switch-on');
+
+        if (this.classList.contains('switch-on')) {
+            giftCardContentBonus.classList.add('show');
+        } else {
+            giftCardContentBonus.classList.remove('show');
+        }
+    });
+}
+
+
 
 
 
@@ -896,3 +954,215 @@ giftCardBlocks.forEach((giftCardBlock) => {
         giftCardContent.classList.remove("active");
     });
 });
+
+
+document.querySelectorAll(".popup-cart__product").forEach(product => {
+    const minusBtn = product.querySelector(".popup-cart__product__minus");
+    const plusBtn = product.querySelector(".popup-cart__product__plus");
+    const valueEl = product.querySelector(".value");
+
+    let count = parseInt(valueEl.textContent.trim(), 10) || 1;
+
+    minusBtn.addEventListener("click", () => {
+        if (count > 1) {
+            count--;
+            valueEl.textContent = count;
+        }
+    });
+
+    plusBtn.addEventListener("click", () => {
+        count++;
+        valueEl.textContent = count;
+    });
+});
+
+
+
+const addMoreBtn = document.getElementById("addMoreBtn");
+const container = document.getElementById("reviewUploadActions");
+const firstInput = document.getElementById("reviewImage");
+const uploadField = document.getElementById("reviewUploadField");
+
+function handleFiles(files, triggerField) {
+    let hasError = false;
+
+    Array.from(files).forEach(file => {
+        if (file.size > 10 * 1024 * 1024 || !['image/jpeg', 'image/png', 'image/jpg'].includes(file.type)) {
+            hasError = true;
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = e => {
+            if (!container) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("review-popup__img-item");
+
+            const img = document.createElement("img");
+            img.src = e.target.result;
+
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.classList.add("review-popup__img-remove");
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12.6673 3.33398L3.33398 12.6673M3.33398 3.33398L12.6673 12.6673" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            `;
+
+            btn.addEventListener("click", () => {
+                wrapper.remove();
+
+                if (!container.querySelector(".review-popup__img-item") && uploadField) {
+                    uploadField.classList.remove("hidden");
+                    container.classList.add("hidden");
+                }
+            });
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(btn);
+
+            container.insertBefore(wrapper, addMoreBtn ? addMoreBtn.nextSibling : null);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    if (hasError && triggerField) {
+        const errorMsg = triggerField.querySelector(".error");
+        if (errorMsg) {
+            errorMsg.style.display = "block";
+            setTimeout(() => errorMsg.style.display = "none", 4000);
+        }
+    }
+
+    if (container && uploadField) {
+        container.classList.remove("hidden");
+        uploadField.classList.add("hidden");
+    }
+}
+
+// если есть первый input
+if (firstInput) {
+    firstInput.addEventListener("change", () => {
+        handleFiles(firstInput.files, uploadField);
+        firstInput.value = "";
+    });
+}
+
+// создаём доп. input, только если есть кнопка
+if (addMoreBtn) {
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = ".jpg,.jpeg,.png";
+    fileInput.multiple = true;
+    fileInput.hidden = true;
+    document.body.appendChild(fileInput);
+
+    addMoreBtn.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", () => {
+        handleFiles(fileInput.files, container);
+        fileInput.value = "";
+    });
+}
+
+document.querySelectorAll(".order-registration__gift-card__drodown").forEach(dropdown => {
+    const btn = dropdown.querySelector("button");
+    const content = dropdown.querySelector(".content");
+    const radios = content.querySelectorAll(".radio-input");
+
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            content.style.transitionDuration = (content.scrollHeight / 1000) + "s";
+        } else {
+            const fullHeight = content.scrollHeight;
+            content.style.transitionDuration = (fullHeight / 1000) + "s";
+            content.style.maxHeight = fullHeight + "px";
+        }
+    });
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            const label = radio.nextElementSibling;
+            if (!label) return;
+
+            const numberEl = label.querySelector(".number");
+            if (numberEl) {
+                btn.textContent = numberEl.textContent.trim();
+                btn.classList.add("selected");
+            }
+
+            btn.classList.remove("active");
+            content.style.maxHeight = null;
+        });
+    });
+});
+
+document.querySelectorAll(".order-registration__delivery__cdek-sam__drodown").forEach(dropdown => {
+    const btn = dropdown.querySelector("button");
+    const content = dropdown.querySelector(".content");
+    const radios = content.querySelectorAll(".radio-input");
+    const maxHeightRem = 18.75;
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const maxHeightPx = maxHeightRem * rootFontSize;
+
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+            content.style.maxHeight = "0px";
+        } else {
+            content.style.maxHeight = maxHeightPx + "px";
+        }
+    });
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            const label = radio.nextElementSibling;
+            if (!label) return;
+
+            const numberEl = label.querySelector(".name");
+            if (numberEl) {
+                btn.textContent = numberEl.textContent.trim();
+                btn.classList.add("selected");
+            }
+
+            btn.classList.remove("active");
+            content.style.maxHeight = "0px";
+        });
+    });
+});
+
+
+
+const deliveryBlock = document.getElementById('delivery-cdek-sam');
+if (deliveryBlock) {
+    const buttons = deliveryBlock.querySelectorAll('.buttons button');
+    const list = deliveryBlock.querySelector('.order-registration__delivery__cdek-sam__list');
+    const map = deliveryBlock.querySelector('.order-registration__delivery__cdek-sam__map');
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            // убираем актив у всех кнопок
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // показываем нужный блок
+            if (index === 0) { // Список
+                list.style.display = 'block';
+                map.style.display = 'none';
+            } else { // Карта
+                list.style.display = 'none';
+                map.style.display = 'block';
+            }
+        });
+    });
+
+    // по умолчанию показываем список
+    list.style.display = 'block';
+    map.style.display = 'none';
+}

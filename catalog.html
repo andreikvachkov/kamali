@@ -989,6 +989,796 @@
             </div>
         </div>
     </div>
+
+    <div class="popup-bonus">
+        <button class="popup-bonus__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup-bonus__wrap">
+            <p class="popup-bonus__title">
+                Покупайте выгодно
+            </p>
+            <div class="popup-bonus__text">
+                Зарегистрируйтесь или авторизуйтесь, чтобы получать бонусы и оплачивать ими до 50% от стоимости заказа
+            </div>
+            <div class="popup-bonus__buttons">
+                <a href="" class="popup-bonus__login-btn">
+                    Вход / регистрация
+                </a>
+                <button class="popup-bonus__guest-btn">
+                    Продолжить как гость
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bonus-thanks">
+        <button class="popup-bonus-thanks__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup-bonus-thanks__wrap">
+            <div class="popup-bonus-thanks__left">
+                <img src="assets/images/popup-bonus-thanks.png" alt="">
+            </div>
+            <div class="popup-bonus-thanks__right">
+                <p class="popup-bonus-thanks__title">
+                    Карта будет доставлена получателю 🤍
+                </p>
+                <div class="popup-bonus-thanks__text">
+                    <p>
+                        Отправим подарочную карту
+                        на&nbsp;указанную электронную почту
+                    </p>
+                    <p>
+                        Подберем что-нибудь для вас?
+                    </p>
+                </div>
+                <a href="" class="popup-bonus-thanks__btn">
+                    В каталог
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cart-notification">
+        <button class="cart-notification__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M15.8334 4.16699L4.16669 15.8337M4.16669 4.16699L15.8334 15.8337" stroke="#4A4A4A"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="cart-notification__left">
+            <img src="assets/images/catalog-product.png" alt="">
+        </div>
+        <div class="cart-notification__right">
+            <p class="cart-notification__title">
+                Добавлен в избранное
+            </p>
+            <div class="cart-notification__text">
+                Парфюмированный мист для тела и волос
+            </div>
+            <a href="" class="cart-notification__btn">
+                Перейти в избранные
+            </a>
+        </div>
+    </div>
+    <div class="popup-cart">
+        <button class="popup-cart__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <!-- <div class="popup-cart__empty">
+            <p class="popup-cart__empty__title">
+                Пустая корзина — как утро
+                без&nbsp;чашечки ароматного кофе 🥲
+            </p>
+            <p class="popup-cart__empty__text">
+                Давайте наполним ее чем–то особенным
+            </p>
+            <a href="" class="popup-cart__empty__btn">
+                перейти в каталог
+            </a>
+        </div> -->
+        <div class="popup-cart__content">
+            <p class="popup-cart__content__title">
+                корзина
+            </p>
+            <div class="popup-cart__product-list scrollable">
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-cart__product">
+                    <div class="popup-cart__product__left">
+                        <img src="assets/images/order-ico.png" alt="">
+                    </div>
+                    <div class="popup-cart__product__right">
+                        <div class="popup-cart__product__buttons">
+                            <button class="popup-cart__product__add-wishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.30982 19.3384L8.77293 18.7485L8.30982 19.3384ZM11.5 5.31675L10.9607 5.83798C11.102 5.98418 11.2967 6.06675 11.5 6.06675C11.7033 6.06675 11.898 5.98418 12.0393 5.83798L11.5 5.31675ZM14.6902 19.3384L15.1533 19.9284L14.6902 19.3384ZM8.30982 19.3384L8.77293 18.7485C7.18364 17.5009 5.43941 16.2779 4.05612 14.7268C2.69856 13.2046 1.75 11.4262 1.75 9.11901H1H0.25C0.25 11.8964 1.41164 14.0152 2.93663 15.7252C4.4359 17.4063 6.34658 18.7507 7.84671 19.9284L8.30982 19.3384ZM1 9.11901H1.75C1.75 6.85904 3.03246 4.96012 4.7889 4.16062C6.49891 3.38225 8.79058 3.59273 10.9607 5.83798L11.5 5.31675L12.0393 4.79551C9.48459 2.15243 6.52626 1.72171 4.16747 2.7954C1.85512 3.84795 0.25 6.29433 0.25 9.11901H1ZM8.30982 19.3384L7.84671 19.9284C8.38492 20.3509 8.96028 20.7994 9.54277 21.1384C10.1251 21.4772 10.7854 21.75 11.5 21.75V21V20.25C11.1646 20.25 10.7749 20.1199 10.2972 19.8419C9.81963 19.564 9.3249 19.1818 8.77293 18.7485L8.30982 19.3384ZM14.6902 19.3384L15.1533 19.9284C16.6534 18.7507 18.5641 17.4063 20.0634 15.7252C21.5884 14.0152 22.75 11.8964 22.75 9.11901H22H21.25C21.25 11.4262 20.3014 13.2046 18.9439 14.7268C17.5606 16.2779 15.8164 17.5009 14.2271 18.7485L14.6902 19.3384ZM22 9.11901H22.75C22.75 6.29433 21.1449 3.84795 18.8325 2.7954C16.4737 1.72171 13.5154 2.15243 10.9607 4.79551L11.5 5.31675L12.0393 5.83798C14.2094 3.59273 16.5011 3.38225 18.2111 4.16062C19.9675 4.96012 21.25 6.85904 21.25 9.11901H22ZM14.6902 19.3384L14.2271 18.7485C13.6751 19.1818 13.1804 19.564 12.7028 19.8419C12.2251 20.1199 11.8354 20.25 11.5 20.25V21V21.75C12.2146 21.75 12.8749 21.4772 13.4572 21.1384C14.0397 20.7994 14.6151 20.3509 15.1533 19.9284L14.6902 19.3384Z"
+                                        fill="#621617" />
+                                </svg>
+                            </button>
+                            <button class="popup-cart__product__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="popup-cart__product__name">
+                            macadami mist
+                        </p>
+                        <div class="popup-cart__product__text">
+                            <p>
+                                Парфюмированный крем для тела
+                            </p>
+                            <p>
+                                250 мл
+                            </p>
+                        </div>
+                        <div class="popup-cart__product__bottom">
+                            <div class="popup-cart__product__count">
+                                <button class="popup-cart__product__minus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.91602 7H11.0827" stroke="#4A4A4A" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <span class="value">
+                                    1
+                                </span>
+                                <button class="popup-cart__product__plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 2.91699V11.0837M2.91602 7.00033H11.0827" stroke="#4A4A4A"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="popup-cart__product__price">
+                                <p class="old">
+                                    900₽
+                                </p>
+                                <p class="sale">
+                                    620₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-cart__product__result">
+                <div class="row">
+                    <p>
+                        Итого:
+                    </p>
+                    <p class="value">
+                        1 050₽
+                    </p>
+                </div>
+                <a href="" class="popup-cart__product__submit-btn">
+                    Оформить заказ
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-reorder">
+        <button class="popup-reorder__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <p class="popup-reorder__title">
+            Добавлен в корзину 4 шт.
+        </p>
+        <a href="" class="popup-reorder__btn">
+            Перейти в корзину
+        </a>
+    </div>
+    <div class="account__popup-info">
+        <button class="account__popup-info__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="account__popup-info__wrap">
+            <p class="account__popup-info__name">
+                правила списания бонусов
+            </p>
+            <div class="account__popup-info__content scrollable">
+                <h2>
+                    Списание бонусов
+                </h2>
+                <ul>
+                    <li>
+                        Оплатить бонусами можно до 50% от стоимости покупки.
+                    </li>
+                    <li>
+                        Бонусы от покупки можно списать спустя 19 дней после покупки на сайте.
+                    </li>
+                    <li>
+                        1000 приветственных бонусов за регистрацию начисляются через 7 дней
+                    </li>
+                    <li>
+                        Списание бонусов недоступно для товаров категории UNDERWEAR и ART
+                    </li>
+                </ul>
+                <h2>
+                    Срок действия баллов
+                </h2>
+                <ul>
+                    <li>
+                        6 месяцев с момента покупки. Далее бонусы сгорают. Приветственные 1000 бонусов действуют 3
+                        месяца с момента начисления. Далее бонусы сгорают.
+                    </li>
+                    <li>
+                        При возврате товара бонусы, начисленные за покупку, списываются.
+                    </li>
+                </ul>
+                <h2>
+                    Уровни накопления и кешбэк
+                </h2>
+                <ul>
+                    <li>
+                        Сумма накапливается за всю историю покупок, начиная с момента регистрации в программе
+                        лояльности.
+
+                    </li>
+                    <li>
+                        3 уровня:
+                        <ul>
+                            <li>
+                                «QUEEN» (от 15 000 руб до 49 999 руб) - 3% кешбэк от суммы покупки
+                            </li>
+                            <li>
+                                «FASHIONABLE QUEEN» (от 50 000 руб до 99 999 руб) - 5% кешбэк
+                            </li>
+                            <li>
+                                «EXTREMELY SEXY FASHIONABLE QUEEN» (от 100 000 руб) - 10% кешбэк
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="account__return-popup">
+        <button class="account__return-popup__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="account__return-popup__content">
+            <p class="account__return-popup__name">
+                Заявление на возврат товара
+            </p>
+            <form action="">
+                <div class="account__return-popup__form-content">
+                    <div class="account__return-popup__return-reason">
+                        <button class="return-reason__btn" type="button">
+                            Выберите причину из списка
+                        </button>
+                        <div class="return-reason__content">
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-1"
+                                    name="account__return-popup" value="Брак">
+                                <label for="account__return-popup-1" class="radio-label">Брак</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-2"
+                                    name="account__return-popup" value="Не нравится аромат ">
+                                <label for="account__return-popup-2" class="radio-label">Не нравится аромат </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" class="radio-input" id="account__return-popup-3"
+                                    name="account__return-popup" value="Целостность упаковки нарушена ">
+                                <label for="account__return-popup-3" class="radio-label">Целостность упаковки нарушена
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__return-popup__textarea">
+                        <div class="account__return-popup__textarea__wrap">
+                            <textarea name="" id="return-reasonMessage" placeholder="Комментарий"></textarea>
+                            <p class="char-count" id="return-reason-charCount">0 из 300</p>
+                        </div>
+                        <p class="error">
+                            Ошибка
+                        </p>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox-input" id="account__return-popup-policy"
+                        name="account__return-popup-policy" value="account__return-popup-policy">
+                    <label for="account__return-popup-policy" class="checkbox-label">Соглашаюсь с <a href="">Политикой
+                             обработки персональных данных</a></label>
+                </div>
+                <button class="account__return-popup__form__btn">
+                    Отправить заявку на возврат
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="review-popup">
+        <button class="review-popup__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="review-popup__content">
+            <p class="review-popup__name">
+                оставить отзыв
+            </p>
+            <form action="">
+                <div class="review-popup__form-content">
+                    <div class="row">
+                        <div class="review-popup__field">
+                            <input type="text" placeholder="Имя*">
+                            <p class="error">
+                                Ошибка
+                            </p>
+                        </div>
+                        <div class="review-popup__field">
+                            <input type="text" placeholder="Фамилия*">
+                            <p class="error">
+                                Ошибка
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="review-popup__field">
+                            <input type="text" placeholder="Адрес электронной почты*">
+                            <p class="error">
+                                Ошибка
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review-popup__textarea">
+                        <div class="review-popup__textarea__wrap">
+                            <textarea name="" id="review-popupMessage"
+                                placeholder="Поделитесь впечатлениями от использования продукта"></textarea>
+                            <p class="char-count" id="review-popup-charCount">0 из 300</p>
+                        </div>
+                        <p class="error">
+                            Ошибка
+                        </p>
+                    </div>
+                    <div class="review-popup__img-upload">
+                        <label for="reviewImage" class="review-popup__img-field" id="reviewUploadField">
+                            <img src="assets/images/rev-ico.png" alt="" class="review-popup__img-icon">
+                            <div class="review-popup__img-text">
+                                Принимаем файлы менее 10 МВ <br>
+                                в формате jpg, jpeg, png
+                            </div>
+                        </label>
+                        <input type="file" id="reviewImage" class="review-popup__img-input" accept=".jpg,.jpeg,.png"
+                            multiple>
+
+                        <div class="review-popup__img-actions hidden" id="reviewUploadActions">
+                            <button type="button" class="review-popup__add-btn" id="addMoreBtn">
+                                <img src="assets/images/rev-ico.png" alt="">
+                            </button>
+                        </div>
+                        <p class="error">
+                            Превышен размер файла или выбран неверный формат. <br>
+                            Загрузите изображение менее 10 МВ форматом jpg, jpeg, png
+                        </p>
+                    </div>
+
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox-input" id="review-popup-policy" name="review-popup-policy"
+                        value="review-popup-policy">
+                    <label for="review-popup-policy" class="checkbox-label">Соглашаюсь с <a href="">Политикой
+                             обработки персональных данных</a></label>
+                </div>
+                <button class="review-popup__form__btn">
+                    оставить отзыв
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="review-popup-thank">
+        <button class="review-popup-thank__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <p class="review-popup-thank__title">
+            Спасибо за отзыв!
+        </p>
+        <div class="review-popup-thank__text">
+            Уведомление о публикации отправим на почту. <br>С любовью, Kamali ❤️
+        </div>
+    </div>
+    <div class="bonus-popup">
+        <button class="bonus-popup__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 5L5 19M5 5L19 19" stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="bonus-popup__content">
+            <p class="bonus-popup__title">
+                Бонусная карта
+            </p>
+            <div class="bonus-popup__card">
+                <div class="bonus-popup__card__wrap">
+                    <p class="bonus-popup__card__text">
+                        Ваши бонусы
+                    </p>
+                    <p class="bonus-popup__card__value">
+                        1 500
+                    </p>
+                </div>
+            </div>
+            <div class="bonus-popup__sum">
+                <div class="bonus-popup__sum-wrap">
+                    <input type="text" placeholder="Введите сумму для списания">
+                    <div class="buttons">
+                        <button class="clear">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <path d="M19 5.5L5 19.5M5 5.5L19 19.5" stroke="#4A4A4A" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="sucsess-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                fill="none">
+                                <path
+                                    d="M6.36548 10.6L12.0155 4.95C12.1488 4.81667 12.3044 4.75 12.4822 4.75C12.6599 4.75 12.8155 4.81667 12.9488 4.95C13.0822 5.08333 13.1488 5.24178 13.1488 5.42533C13.1488 5.60889 13.0822 5.76711 12.9488 5.9L6.83215 12.0333C6.69882 12.1667 6.54326 12.2333 6.36548 12.2333C6.18771 12.2333 6.03215 12.1667 5.89882 12.0333L3.03215 9.16667C2.89882 9.03333 2.83482 8.87511 2.84015 8.692C2.84548 8.50889 2.91504 8.35044 3.04882 8.21667C3.1826 8.08289 3.34104 8.01622 3.52415 8.01667C3.70726 8.01711 3.86548 8.08378 3.99882 8.21667L6.36548 10.6Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="error">
+                    Недостаточно средств для списания
+                </p>
+                <a href="" class="bonus-popup__sum__more-btn">
+                    Узнать подробнее
+                </a>
+            </div>
+            <button class="bonus-popup__submit-btn">
+                Применить
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
